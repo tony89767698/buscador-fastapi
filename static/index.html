@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="shortcut icon" href="/static/busqueda.png" type="image/x-icon">
+  <title>Mini motor de busqueda</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand">
+      <div class="logo">🔎</div>
+      <h1>Mini buscador (Modelo Booleano con Indice Invertido)</h1>
+      <p class="sub">Consulta con <b>AND</b>, <b>OR</b>, <b>NOT</b> y paréntesis. Ej: <code>doctor AND NOT abogado</code></p>
+    </div>
+
+    <form id="searchForm" class="search">
+      <input id="q" type="text" placeholder="Escribe tu consulta..." autocomplete="off" />
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div class="meta">
+      <label>Top:
+        <select id="top">
+          <option>5</option>
+          <option selected>10</option>
+          <option>20</option>
+          <option>50</option>
+        </select>
+      </label>
+      <span id="status" class="status"></span>
+    </div>
+
+    <section id="results" class="results"></section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
